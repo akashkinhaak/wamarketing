@@ -11,6 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+    <style>
+        /* navmenu_ul css for it*/
+        .nav_active{
+            display: block !important;
+            height:max-content !important;
+        }
+    </style>
 
 </head>
 
@@ -25,7 +32,7 @@
             </a>
 
             <nav id="navmenu" class="navmenu">
-                <ul>
+                <ul id="navmenu_ul" >
                     <li><a href="#hero" class="active">Home<br></a></li>
                     <li><a href="#about">About</a></li>
                     <li class="dropdown"><a href="#"><span>Use Cases</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -369,10 +376,12 @@
         document.addEventListener("DOMContentLoaded", function () {
             const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
             const navMenu = document.querySelector("#navmenu");
+            const navmenu_ul = document.querySelector("#navmenu_ul");
         
             if (mobileNavToggle) {
                 mobileNavToggle.addEventListener("click", function () {
                     navMenu.classList.toggle("mobile-nav-active");
+                    navmenu_ul.classList.toggle("nav_active");
                     this.classList.toggle("bi-list");
                     this.classList.toggle("bi-x");
                 });
