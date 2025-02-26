@@ -1,4 +1,5 @@
 # WhatsPro - Whatsapp Marketing Landing Page
+<img src="assets/screenshot_1.png">
 
 # Get live Preview <a href="https://akashkinhaak.github.io/wamarketing/" target="_blank">Here</a>
 Hosted on Github Pages
